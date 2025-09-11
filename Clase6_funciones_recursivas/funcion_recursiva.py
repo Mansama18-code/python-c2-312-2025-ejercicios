@@ -30,12 +30,12 @@ def sumar_naturales(numero: int, valor_inicial: int) -> int:
 def sumar_digitos(numero: int) -> int:
    
     numero_str = str(numero)
-    tamano_numero = len(numero_str)
-    if tamano_numero <= 1: 
+    tamano_numero = len(numero_str ) - 1
+    if tamano_numero < 1: 
         resultado = int(numero_str[tamano_numero])
     else: 
         resultado = int(numero_str[tamano_numero]) + sumar_digitos(int(numero_str[tamano_numero - 1]))
-    return resultado
+    return resultado 
     
     
     
@@ -47,4 +47,3 @@ def suma_digitos(numero):
         print(numero %10, numero //10)
         return numero % 10 + suma_digitos(numero // 10)
         
-    
