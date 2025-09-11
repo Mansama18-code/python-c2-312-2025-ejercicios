@@ -29,3 +29,12 @@ def validar_opciones(respuesta: str, mensaje_de_error: str, nombre: str) -> bool
                 respuesta2 = False
                 break
         return respuesta2
+
+def validar_valor_incial(valor_incial: int, valor_tope: int) -> bool:
+     if valor_incial < valor_tope:
+          respuesta = True
+     else: 
+          respuesta = False
+
+
+     return respuesta
